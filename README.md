@@ -104,8 +104,10 @@ the same on modest hardware.
 ## What is and is not in this repository
 
 **Included** — the architecture, the heads, the decomposition, the reasoning
-loop, the perception path, and the ingest layer that reads local media and
-landing pages. 26 modules, ~480 KB of source.
+loop, the perception path, and the full ingest layer. 34 modules, ~555 KB of
+source. Every input the model accepts works: pasted copy, a local image or
+video, a landing page, a Meta Ad Library or TrendTrack link, a gethookd share
+link, YouTube, TikTok, or a direct CDN media URL.
 
 **Not included** — the trained weights and the sourced knowledge base. As
 published this is the model's code, not its parameters; you can read exactly
@@ -113,16 +115,14 @@ how it decides, and train your own. This mirrors how open-weight releases ship
 without their training data.
 
 Also absent: the desktop application, the training and evaluation harnesses,
-the regression corpus (which embeds third-party ad copy), and the aggregator
-fetchers for Meta Ad Library / TrendTrack / gethookd. Those aggregator paths
-are imported lazily, so pasting a share link from one of them raises an
-`ImportError` while local files and ordinary landing-page URLs work.
+and the regression corpus.
 
 ## Running it
 
 ```bash
-pip install numpy onnxruntime rapidocr-onnxruntime fastembed
-pip install playwright && playwright install chromium   # landing pages only
+pip install numpy onnxruntime rapidocr-onnxruntime fastembed   # core
+pip install playwright && playwright install chromium          # web pages
+# video paths additionally want ffmpeg, yt-dlp and a whisper build on PATH
 ```
 
 ```python
@@ -133,10 +133,16 @@ stack = v4_admix.load_stack()
 # pasted ad copy
 v4_admix.analyze(open("ad.txt").read(), stack)
 
-# a landing page, an image, or a video — ingest returns the brief
+# any URL or local file — ingest resolves it and returns the structured brief
 brief, text = v4_media.ingest_structured("https://example.com/offer")
 v4_admix.analyze(text, stack, brief=brief)
 ```
+
+`v4_media.is_media()` routes the input: `landing`, `adlib`, `trendtrack`,
+`gethookd`, `youtube`, `tiktok`, `video`/`image`, or a direct media URL. Each
+fetcher is imported only when its path is taken, so you install browser and
+video tooling only for the sources you actually use. Sources that need an API
+key or a logged-in session read it from `.env`; none is bundled.
 
 `load_stack()` expects a knowledge base and checkpoints, neither of which ships
 here. Without them the code imports and the architecture is fully readable, but
