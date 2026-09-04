@@ -65,6 +65,15 @@ discarded rather than published.
 text, CLIP/SigLIP zero-shot scene tags, and face detection for the people
 shown. `v4_distill.py` turns frames plus transcript into a structured brief.
 
+**Ingest** — `v4_media.py` routes an input to the right reader: a local image
+or video (ffmpeg keyframes, whisper transcript), or a web page.
+`v4_landing.py` renders a landing page in headless chromium, dismisses consent
+walls, and returns the page copy plus viewport screenshots at successive
+scroll offsets — deliberately viewport-sized, because a single tall capture
+squashed for a face detector loses the people on it. The landing page is the
+brand's own pitch to its buyer, so faces found there are treated as a stronger
+signal of who buys than the creative's cautious read.
+
 ### Two design rules worth stating
 
 **Open-set, closed-grounding.** The painpoint is read from the copy in open
@@ -95,22 +104,38 @@ the same on modest hardware.
 ## What is and is not in this repository
 
 **Included** — the architecture, the heads, the decomposition, the reasoning
-loop, and the perception path. 21 modules, ~430 KB of source.
+loop, the perception path, and the ingest layer that reads local media and
+landing pages. 26 modules, ~480 KB of source.
 
 **Not included** — the trained weights and the sourced knowledge base. As
 published this is the model's code, not its parameters; you can read exactly
 how it decides, and train your own. This mirrors how open-weight releases ship
 without their training data.
 
-Also deliberately absent: the desktop application, the ad-library and
-landing-page scrapers, the training and evaluation harnesses, and the
-regression corpus (which embeds third-party ad copy).
+Also absent: the desktop application, the training and evaluation harnesses,
+the regression corpus (which embeds third-party ad copy), and the aggregator
+fetchers for Meta Ad Library / TrendTrack / gethookd. Those aggregator paths
+are imported lazily, so pasting a share link from one of them raises an
+`ImportError` while local files and ordinary landing-page URLs work.
 
 ## Running it
 
 ```bash
 pip install numpy onnxruntime rapidocr-onnxruntime fastembed
-python -c "import bernay.v4_admix as a; s = a.load_stack(); a.analyze(open('ad.txt').read(), s)"
+pip install playwright && playwright install chromium   # landing pages only
+```
+
+```python
+import v4_admix, v4_media
+
+stack = v4_admix.load_stack()
+
+# pasted ad copy
+v4_admix.analyze(open("ad.txt").read(), stack)
+
+# a landing page, an image, or a video — ingest returns the brief
+brief, text = v4_media.ingest_structured("https://example.com/offer")
+v4_admix.analyze(text, stack, brief=brief)
 ```
 
 `load_stack()` expects a knowledge base and checkpoints, neither of which ships
