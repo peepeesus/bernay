@@ -1,0 +1,31 @@
+# Weights and the sourced knowledge base are NOT part of this distribution.
+# The architecture and inference code are; the trained parameters are not.
+*.pt
+*.pth
+*.safetensors
+*.onnx
+*.bin
+
+# The sourced painpoint/mechanism KB and its cached anchors
+v4_correlations.json
+*_anchors.npy
+*_anchors.json
+
+# Datasets, scraped ad corpora, evaluation captures
+*.jsonl
+*.csv
+*.log
+creatives*/
+ad_creatives/
+
+# Secrets — never anywhere but .env
+.env
+*_key.txt
+
+# Python
+__pycache__/
+*.py[cod]
+.venv*/
+build/
+dist/
+*.egg-info/
