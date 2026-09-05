@@ -1,0 +1,4 @@
+/* Bernay webfonts. The source uses three Google Fonts verbatim:
+   Junge (serif wordmark), Kalam (hand-drawn marker), Instrument Sans (clean helper).
+   Loaded from Google Fonts CDN — see readme.md "Font substitution" note. */
+@import url('https://fonts.googleapis.com/css2?family=Junge&family=Kalam:wght@300;400;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap');

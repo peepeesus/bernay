@@ -1,0 +1,31 @@
+/* Bernay — spacing, radius & shadow tokens.
+   Radii transcribed from source: bezel/canvas 7px, pill button 9px. */
+:root{
+  --space-1:4px;
+  --space-2:8px;
+  --space-3:12px;
+  --space-4:16px;
+  --space-5:22px;   /* bezel inset between purple frame and black screen in source */
+  --space-6:32px;
+  --space-8:48px;
+  --space-10:64px;
+
+  --radius-screen:7px;   /* device bezel & inner canvas (source) */
+  --radius-pill:9px;     /* highlighter button (source) */
+  --radius-sm:5px;
+  --radius-lg:14px;
+
+  /* Soft drop for the purple "screen" sitting on paper */
+  --shadow-screen:0 18px 40px -12px rgba(74,70,114,.45);
+  /* Same drop, re-tinted per bezel family — a purple shadow under a brass or
+     steel bezel reads as a colour bug. */
+  --shadow-gold:0 18px 40px -12px rgba(122,100,40,.42);
+  --shadow-steel:0 18px 40px -12px rgba(88,88,94,.38);
+  --shadow-crimson:0 18px 40px -12px rgba(140,0,0,.42);
+  --shadow-pill:0 2px 6px -1px rgba(0,153,46,.45);
+  --shadow-pill-ballpoint:0 2px 6px -1px rgba(0,85,154,.45);
+  --shadow-pill-pencil:0 2px 6px -1px rgba(60,60,60,.40);
+
+  /* Marker-stroke ring width used across hand-drawn accents (source: 4.5px) */
+  --stroke-marker:4.5px;
+}

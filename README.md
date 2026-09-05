@@ -114,8 +114,7 @@ published this is the model's code, not its parameters; you can read exactly
 how it decides, and train your own. This mirrors how open-weight releases ship
 without their training data.
 
-Also absent: the desktop application, the training and evaluation harnesses,
-and the regression corpus.
+Also absent: the training and evaluation harnesses, and the regression corpus.
 
 ## Running it
 
@@ -143,6 +142,28 @@ v4_admix.analyze(text, stack, brief=brief)
 fetcher is imported only when its path is taken, so you install browser and
 video tooling only for the sources you actually use. Sources that need an API
 key or a logged-in session read it from `.env`; none is bundled.
+
+## The desktop app
+
+`app/` is the native shell: a FastAPI server that wraps the model and a React
+UI rendered in a real window (pywebview / Edge WebView2 — no Electron).
+
+```bash
+pip install fastapi uvicorn pywebview requests
+cd app/ui && npm install && npm run build
+cd .. && python desktop.py
+```
+
+`desktop.py` reuses an already-running server if it finds one and otherwise
+boots its own, then shuts it down again when the window closes. The server
+finds the model by marker file, so it works both as distributed
+(`<repo>/app` beside `<repo>/bernay`) and in a checkout where the app sits
+inside the model tree — no configuration either way.
+
+`app/server/sandbox.py` starts throwaway instances on free ports so a test loop
+never touches the real one on 8756. Langfuse tracing is optional: if the
+package isn't installed, `observe` degrades to a no-op instead of refusing to
+start.
 
 `load_stack()` expects a knowledge base and checkpoints, neither of which ships
 here. Without them the code imports and the architecture is fully readable, but

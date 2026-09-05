@@ -29,3 +29,15 @@ __pycache__/
 build/
 dist/
 *.egg-info/
+
+# UI build output and deps
+node_modules/
+*.tsbuildinfo
+app/ui/dist/
+app/server/static/
+
+# Local smoke / spotcheck captures (they hold analysed ad copy)
+smoke_*.json
+smoke_*.log
+spotcheck_*.json
+example_analyze_response.json

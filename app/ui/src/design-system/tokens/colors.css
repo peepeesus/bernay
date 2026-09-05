@@ -1,0 +1,108 @@
+/* Bernay — colour tokens. Values transcribed verbatim from the source sketch. */
+:root{
+  /* Base palette */
+  --paper:#ffffff;            /* canvas / page — the napkin */
+  --ink:#111111;             /* primary hand-written text (17,17,17) */
+  --black:#000000;           /* the input "screen" fill */
+  --graphite:#aaaaaa;        /* muted / placeholder helper text (170,170,170) */
+
+  /* Marker blues — the hand-drawn accent strokes */
+  --marker-blue:#1c7eff;     /* primary felt-tip stroke (28,126,255) */
+  --marker-blue-soft:#6e95c8;/* secondary / lighter pen stroke (110,149,200) */
+
+  /* Highlighter greens — the pill buttons */
+  --green-bright:#00ff4d;    /* highlighter top (0,255,77) */
+  --green-deep:#00992e;      /* highlighter bottom (0,153,46) */
+
+  /* Screen purples — the device bezel */
+  --purple-light:#968def;    /* bezel top (150,141,239) */
+  --purple-deep:#4a4672;     /* bezel bottom (74,70,114) */
+
+  /* Brass golds — bezel, sampled from Component 4.png */
+  --gold-light:#e3cb70;      /* bezel top (227,203,112) */
+  --gold-deep:#998137;       /* bezel bottom (153,129,55) */
+
+  /* Steel greys — bezel, sampled from Component 2 (4).png */
+  --steel-light:#f9f9f9;     /* bezel top (249,249,249) */
+  --steel-deep:#848484;      /* bezel bottom (132,132,132) */
+
+  /* Ballpoint blues — the filled blue pill, from Component 3 (2).png */
+  --blue-bright:#0cbcfd;     /* pill top (12,188,253) */
+  --blue-deep:#00559a;       /* pill bottom (0,85,154) */
+
+  /* Crimson — bezel, sampled from Component 2 (5).png */
+  --crimson-light:#fc0000;   /* bezel top (252,0,0) */
+  --crimson-deep:#6c0000;    /* bezel bottom (108,0,0) */
+
+  /* Desire chakra hues — the desire chips are coloured by the chakra centre
+     v4_taxonomy.json links each desire to, so the palette is the model's own
+     taxonomy rather than decoration. Four reuse existing tokens; only root,
+     sacral and crown needed new values. Tuned for the black card interior. */
+  --chakra-root:#ff5a4d;      /* survival, safety, comfort, material */
+  --chakra-sacral:#ff9d3c;    /* pleasure, novelty, connection, freedom */
+  --chakra-solar:var(--gold-light);      /* power, status, control, ambition… */
+  --chakra-heart:var(--green-bright);    /* love, belonging, harmony */
+  --chakra-throat:var(--blue-bright);    /* expression, recognition */
+  --chakra-brow:var(--purple-light);     /* insight, clarity, intellect */
+  --chakra-crown:#c9a7ff;     /* transcendence, purpose, growth */
+
+  /* graphite pencil pill — stops sampled from Component 5.png (the
+     "View architecture" export): a flat 180deg ramp #e3e3e3 -> #7a7a7a. */
+  --graphite-light:#e3e3e3;
+  --graphite-deep:#7a7a7a;
+
+  /* Signature gradients */
+  --grad-screen:linear-gradient(180deg,var(--purple-light) 0%,var(--purple-deep) 100%);
+  --grad-highlighter:linear-gradient(180deg,var(--green-bright) 0%,var(--green-deep) 100%);
+  --grad-ballpoint:linear-gradient(180deg,var(--blue-bright) 0%,var(--blue-deep) 100%);
+  --grad-pencil:linear-gradient(180deg,var(--graphite-light) 0%,var(--graphite-deep) 100%);
+
+  /* Semantic aliases.
+     THESE are what themed UI must read — never --paper / --ink directly.
+     Dark mode repoints this layer only; the primitives above stay literal,
+     because a Card with tone="screen" is a black canvas with white text in
+     BOTH themes. Flipping --paper/--ink would turn every card body
+     dark-on-black. --surface-screen / --text-on-screen ARE that canvas and
+     are deliberately never themed. */
+  --surface-page:var(--paper);
+  --surface-raised:var(--paper);   /* topbar, sidebar, paper-tone cards */
+  --surface-screen:var(--black);   /* never themed — the card canvas */
+  --surface-bezel:var(--grad-screen);
+  --text-primary:var(--ink);
+  --text-muted:var(--graphite);
+  --text-on-screen:var(--paper);   /* never themed — text on that canvas */
+  --border-hairline:#eaeaea;
+  --accent:var(--marker-blue);
+  --accent-soft:var(--marker-blue-soft);
+  --action:var(--grad-highlighter);
+  --action-text:var(--ink);
+
+  /* Dark values, declared once; the selectors below only switch to them. */
+  --dark-surface-page:#15161b;     /* deliberately NOT #000 — the card canvases
+                                      are pure black, and need a lighter page
+                                      behind them to still read as surfaces */
+  --dark-surface-raised:#1c1e25;
+  --dark-text-primary:#ececf0;
+  --dark-border-hairline:#2b2d36;
+}
+
+/* An explicit choice (theme toggle, or the pre-paint script in index.html)
+   outranks the system preference. */
+:root[data-theme='dark']{
+  color-scheme:dark;
+  --surface-page:var(--dark-surface-page);
+  --surface-raised:var(--dark-surface-raised);
+  --text-primary:var(--dark-text-primary);
+  --border-hairline:var(--dark-border-hairline);
+}
+
+/* System preference — unless the user explicitly picked light. */
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme='light']){
+    color-scheme:dark;
+    --surface-page:var(--dark-surface-page);
+    --surface-raised:var(--dark-surface-raised);
+    --text-primary:var(--dark-text-primary);
+    --border-hairline:var(--dark-border-hairline);
+  }
+}

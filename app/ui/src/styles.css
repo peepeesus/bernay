@@ -1,0 +1,474 @@
+/* Bernay design-system foundation tokens (colors, type, spacing, fonts). */
+@import "./design-system/tokens/fonts.css";
+@import "./design-system/tokens/colors.css";
+@import "./design-system/tokens/typography.css";
+@import "./design-system/tokens/spacing.css";
+
+/* App-level semantic layer, repointed onto the design system's primitive
+   tokens (the "full visual pass"). The app's content surfaces are almost
+   entirely `Card` components — a purple bezel wrapping a black canvas —
+   so most result text lives ON BLACK regardless of the page's own paper
+   background. --pos/--neg/--dim are tuned to read on *both* (light-enough
+   greys, and a couple of explicit light-on-black fixes below where a rule
+   used to assume the whole app, not just the canvas, was dark: see
+   .hist-item and .win-badge). */
+:root {
+  --bg: var(--surface-page);
+  --border: var(--border-hairline); /* subtle hairline on paper; still reads as a thin ring on a black canvas */
+  --text: var(--text-primary); /* page-level default (topbar/sidebar chrome, not card interiors) */
+  --dim: var(--graphite); /* muted label/helper — works on paper AND on a black canvas */
+  --accent: var(--marker-blue);
+  --pos: #f0f0f0; /* light — for numeric emphasis inside black-canvas cards */
+  --neg: #8c8c8c;
+  --error: #d8392f;
+}
+
+* { box-sizing: border-box; }
+
+/* ---- Bezel colour families -------------------------------------------
+   The card bezel geometry (radius / padding / shadow) is set inline by the
+   Card component and is IDENTICAL for every family — these rules only swap
+   the gradient. Stops are sampled straight from the reference PNGs
+   (Component 1 (34) / Component 2 (2) / Component 2 (3)).
+
+   Tie-dye: each bezel paints its linear gradient plus a soft radial bloom
+   on an oversized canvas, then slowly drifts both layers' background
+   positions past each other, so the colours wander instead of sitting
+   still. Durations are deliberately co-prime-ish so the cards never
+   pulse in lockstep. The inner canvas is opaque, so only the visible
+   border ring shows the motion. */
+.ds-bezel {
+  background-size: 190% 190%, 100% 230%;
+  background-position: 50% 0%, 50% 0%;
+  animation: bezel-tiedye 19s ease-in-out infinite;
+}
+
+@keyframes bezel-tiedye {
+  0%   { background-position:   0%   0%, 50%   0%; }
+  25%  { background-position: 100%  28%, 50%  38%; }
+  50%  { background-position:  62% 100%, 50% 100%; }
+  75%  { background-position:  18%  62%, 50%  55%; }
+  100% { background-position:   0%   0%, 50%   0%; }
+}
+
+.ds-bezel-purple {
+  background-image:
+    radial-gradient(58% 58% at 32% 22%, rgba(255, 255, 255, 0.22), transparent 62%),
+    var(--grad-screen);
+}
+
+/* rainbow — indigo → blue → green → lime → amber → red, top to bottom */
+.ds-bezel-rainbow {
+  background-image:
+    radial-gradient(58% 58% at 30% 20%, rgba(255, 255, 255, 0.20), transparent 62%),
+    linear-gradient(180deg,
+      #4c4773 0%, #2778b9 12.5%, #13b289 25%, #0cf300 37.5%, #9fdd21 50%,
+      #f3be32 62.5%, #d38823 75%, #e1501c 87.5%, #ff1515 100%);
+  animation-duration: 23s;
+}
+
+/* sunset — orange → gold */
+.ds-bezel-sunset {
+  background-image:
+    radial-gradient(58% 58% at 34% 24%, rgba(255, 255, 255, 0.24), transparent 62%),
+    linear-gradient(180deg,
+      #ff810e 0%, #ff9a21 25%, #ffb533 50%, #ffd045 75%, #ffea58 100%);
+  animation-duration: 16s;
+}
+
+/* orchid — blush pink → violet */
+.ds-bezel-orchid {
+  background-image:
+    radial-gradient(58% 58% at 30% 24%, rgba(255, 255, 255, 0.24), transparent 62%),
+    linear-gradient(180deg,
+      #ff9ce8 0%, #f37deb 25%, #e65cf1 50%, #db3ef7 75%, #cf1bfc 100%);
+  animation-duration: 27s;
+}
+
+/* gold — brass, pale straw → antique bronze. Stops sampled down the left
+   border of Component 4.png. */
+.ds-bezel-gold {
+  /* Card sets `box-shadow: var(--shadow-screen)` inline. The inline
+     declaration outranks this class, but the *variable* it reads is resolved
+     on this element — so redefining it here re-tints the drop without the
+     component needing to know about bezel families. */
+  --shadow-screen: var(--shadow-gold);
+  background-image:
+    radial-gradient(58% 58% at 32% 22%, rgba(255, 255, 255, 0.26), transparent 62%),
+    linear-gradient(180deg,
+      var(--gold-light) 0%, #d8c168 15%, #ccb560 30%, #bea654 50%,
+      #af9748 70%, #a58d40 85%, var(--gold-deep) 100%);
+  animation-duration: 25s;
+}
+
+/* steel — near-white → mid grey. Stops sampled down the left border of
+   Component 2 (4).png. The bloom is dialled down (0.14): on an already-light
+   ramp a 0.22 white bloom flattens the top half into a single flat sheet and
+   the drift stops reading. */
+/* crimson — pure red → oxblood. Stops sampled down the left border of
+   Component 2 (5).png. */
+.ds-bezel-crimson {
+  --shadow-screen: var(--shadow-crimson);
+  background-image:
+    radial-gradient(58% 58% at 32% 22%, rgba(255, 255, 255, 0.20), transparent 62%),
+    linear-gradient(180deg,
+      var(--crimson-light) 0%, #e90101 15%, #d10000 30%, #b40000 50%,
+      #960000 70%, #7f0101 85%, var(--crimson-deep) 100%);
+  animation-duration: 18s;
+}
+
+.ds-bezel-steel {
+  --shadow-screen: var(--shadow-steel);
+  background-image:
+    radial-gradient(58% 58% at 32% 22%, rgba(255, 255, 255, 0.14), transparent 62%),
+    linear-gradient(180deg,
+      var(--steel-light) 0%, #e8e8e8 15%, #d5d5d5 30%, #bebebe 50%,
+      #a6a6a6 70%, #959595 85%, var(--steel-deep) 100%);
+  animation-duration: 21s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ds-bezel { animation: none; }
+}
+
+/* SketchAccent is inlined (not <img src>) so its currentColor fill can
+   pick up `color` from the wrapper and theme correctly — but that means
+   the SVG's own fixed width/height attributes need overriding to fill the
+   wrapper instead of rendering at their literal source pixel size. */
+.sketch-accent svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+html, body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans), 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px;
+}
+
+.app { min-height: 100vh; display: flex; flex-direction: column; }
+
+.topbar {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 12px 20px;
+  border-bottom: 1.5px solid var(--border);
+  background: var(--surface-raised);
+}
+
+/* the model name itself is now the design system's <Button selected> pill
+   (see App.tsx) -- this is just the small "769.1k params" note beside it. */
+.params-badge {
+  font-family: var(--font-sans);
+  font-size: 12px;
+}
+
+/* The "View architecture" pill now owns the topbar's free space (its own
+   margin-left:auto) and sits immediately left of this badge. A second auto
+   margin here would SPLIT the free space between the two instead of pushing
+   both right, leaving the pill stranded mid-bar. */
+.status { font-family: var(--font-sans); font-weight: 500; font-size: 12px; }
+.status-ready { color: #3fa552; }
+.status-loading { color: #f4a52a; }
+.status-error { color: var(--error); }
+
+.layout { display: flex; flex: 1; min-height: 0; }
+
+.side {
+  width: 340px;
+  min-width: 280px;
+  padding: 14px;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+}
+
+.main {
+  flex: 1;
+  padding: 16px 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Section labels inside a Card's black canvas AND on paper (the raw-output
+   summary) — sentence case per the content voice rule (no ALL-CAPS), a
+   small muted Instrument Sans micro-label, matching the "PASTED" eyebrow
+   treatment in the design system's own ui_kits/AnalysisScreen reference. */
+.panel-title {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 11.5px;
+  letter-spacing: 0.03em;
+  color: var(--dim);
+  margin-bottom: 10px;
+  cursor: default;
+}
+
+.error {
+  margin-top: 8px;
+  color: var(--error);
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  white-space: pre-wrap;
+}
+
+/* Live progress while an analysis runs — sits under the Analyze button and
+   wraps, so long ingest messages ("ingesting adlib (scrape / transcribe /
+   distill)…") never have to fit inside the pill. */
+.progress-line {
+  margin-top: 8px;
+  color: var(--dim);
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+/* Lives inside a Card's black canvas — text is set to var(--paper), not
+   var(--text)/ink, or it would be unreadable against the canvas. */
+.hist-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  color: var(--paper);
+  border: none;
+  border-bottom: 1px solid var(--border);
+  padding: 7px 2px;
+  margin: 0;
+  font-size: 12.5px;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border-radius: 0;
+}
+.hist-item:hover { color: var(--accent); }
+.hist-item:last-child { border-bottom: none; }
+
+.empty { margin: auto; max-width: 480px; text-align: center; }
+.empty-title {
+  font: var(--weight-hand) 32px/1.15 var(--font-hand);
+  color: var(--text);
+}
+
+.pv-equation {
+  font-family: var(--font-sans);
+  font-size: 28px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.pv-num { color: var(--pos); font-weight: 600; }
+.pv-var { color: var(--dim); font-size: 16px; }
+.pv-op { color: var(--dim); }
+/* The single hero number in the read — Kalam hand + highlighter green,
+   mirroring the "PV 0.83" treatment in ui_kits/bernay-app/AnalysisScreen. */
+.pv-total { color: var(--green-bright); font: var(--weight-hand) 34px/1 var(--font-hand); }
+.pv-meta { margin-top: 6px; color: var(--dim); font-size: 12.5px; }
+
+/* Sits inside PVHero's black canvas — no explicit color, inherits the
+   canvas's var(--paper) text color from Card. */
+.win-badge {
+  margin-left: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 2px 9px;
+  font-family: var(--font-sans);
+}
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 980px) { .grid2 { grid-template-columns: 1fr; } }
+/* A pair whose second card rendered nothing (Painpoints returns null when the
+   ad has no sourced painpoints) would otherwise leave its partner stranded at
+   half width beside dead space — let the survivor span the row. */
+.grid2 > :only-child { grid-column: 1 / -1; }
+
+/* Awareness is the densest read on the page and now owns a full-width row, so
+   it gets the height back: taller tracks and more air between stages. Label
+   and percentage type is deliberately unchanged. */
+.aw-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.aw-label {
+  width: 82px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: var(--dim);
+  text-align: right;
+}
+.aw-track { flex: 1; height: 22px; background: rgba(255, 255, 255, 0.12); border-radius: 4px; overflow: hidden; }
+.aw-bar { height: 100%; border-radius: 4px; }
+.aw-pct { width: 38px; font-family: var(--font-sans); font-size: 12px; }
+.aw-journey { margin-top: 14px; font-family: var(--font-sans); font-size: 12.5px; }
+
+/* Angle & motif families and Painpoints now sit side by side at half width,
+   so their internal leading is pulled in: the text size is untouched, only
+   the gaps between rows. */
+.fam-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 4px; }
+.fam-title {
+  width: 105px;
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  color: var(--dim);
+}
+.chip {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2px 10px;
+  font-size: 12.5px;
+  display: inline-flex;
+  gap: 6px;
+  align-items: baseline;
+}
+/* Desire chips carry their chakra colour via --chip-color (see desires.ts).
+   Tint stays low so a full row reads as a palette, not a set of buttons. */
+.chip-desire {
+  color: var(--chip-color);
+  border-color: color-mix(in srgb, var(--chip-color) 50%, transparent);
+  background: color-mix(in srgb, var(--chip-color) 10%, transparent);
+}
+.chip-emoji {
+  /* slightly larger than the 12.5px label: emoji carry detail in their
+     silhouette and turn to mush below ~13px on a black field */
+  font-size: 13.5px;
+  line-height: 1;
+  /* emoji glyphs ignore `color`; keep them from dragging the baseline */
+  align-self: center;
+}
+.chip-lead { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.chip-pos { color: var(--pos); font-family: var(--font-sans); font-weight: 600; font-size: 11px; }
+.chip-neg { color: var(--neg); font-family: var(--font-sans); font-weight: 600; font-size: 11px; }
+
+.pain { margin-bottom: 6px; }
+.pain-name { font-weight: 600; margin-bottom: 1px; }
+.cite { font-size: 12px; line-height: 1.35; color: var(--dim); margin-left: 10px; margin-bottom: 1px; }
+.cite-src { color: var(--accent); text-decoration: none; }
+.cite-src:hover { text-decoration: underline; }
+
+.kv { display: flex; gap: 10px; margin-bottom: 5px; }
+.kv-k {
+  width: 105px;
+  color: var(--dim);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+.kv-v { font-size: 13.5px; }
+
+.beats { font-family: var(--font-sans); font-weight: 500; font-size: 13px; line-height: 2; }
+.beat-on { color: var(--accent); font-weight: 600; }
+.beat-off { color: #4a4a58; }
+
+/* Terminal-output disclosure — the one surface that can't be the `Card`
+   component (native <details>/<summary> toggle semantics), so the same
+   "purple bezel wrapping a canvas" look is hand-rolled here instead. Paper
+   tone (not screen/black) to echo the "PASTED" excerpt card in
+   ui_kits/bernay-app/AnalysisScreen — a printed transcript on paper,
+   inside the bezel. The <pre> stays genuinely monospace: it is verbatim
+   program output, not interface copy, so the three-typeface brand rule
+   doesn't apply to it. */
+details.raw {
+  background-image:
+    radial-gradient(58% 58% at 32% 22%, rgba(255, 255, 255, 0.14), transparent 62%),
+    linear-gradient(180deg,
+      var(--steel-light) 0%, #e8e8e8 15%, #d5d5d5 30%, #bebebe 50%,
+      #a6a6a6 70%, #959595 85%, var(--steel-deep) 100%);
+  background-size: 190% 190%, 100% 230%;
+  animation: bezel-tiedye 21s ease-in-out infinite;
+  border-radius: var(--radius-screen);
+  padding: var(--space-3);
+  box-shadow: var(--shadow-steel);
+}
+@media (prefers-reduced-motion: reduce) {
+  details.raw { animation: none; }
+}
+details.raw summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 11.5px;
+  letter-spacing: 0.03em;
+  /* ink, not paper: the steel bezel is light, so the old white label sat
+     invisible on it. */
+  color: var(--ink);
+}
+details.raw summary::-webkit-details-marker { display: none; }
+details.raw summary::before { content: "▸ "; }
+details.raw[open] summary::before { content: "▾ "; }
+details.raw .raw-body {
+  background: var(--surface-raised);
+  color: var(--text);
+  border-radius: var(--radius-screen);
+  padding: 12px 14px;
+  margin-top: 10px;
+}
+.raw pre {
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 12px;
+  white-space: pre-wrap;
+  color: var(--text);
+  max-height: 420px;
+  overflow-y: auto;
+  margin: 0;
+}
+
+.dim { color: var(--dim); }
+.small { font-size: 11.5px; margin-top: 6px; }
+
+/* Re-declared after .dim so it wins the cascade (equal specificity, later
+   source order) — this hint sits on the highlighter-green Button and needs
+   the ink-based tone, not the page's muted grey. */
+.kbd-hint { color: rgba(17, 17, 17, 0.55); font-weight: 500; font-size: 12px; }
+
+/* ---- Architecture overlay ---------------------------------------------
+   Full-window map, layered over the app. Lives in-window because the
+   desktop shell delegates window.open() to the system browser. */
+.arch-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  background: #0e0f13;
+}
+.arch-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 9px 14px;
+  border-bottom: 1px solid #262a35;
+  background: #16181f;
+  color: #c3c9d8;
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+}
+.arch-close {
+  background: transparent;
+  border: 1px solid #333a49;
+  color: #c3c9d8;
+  border-radius: 7px;
+  padding: 3px 10px;
+  font-size: 13px;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.arch-close:hover { border-color: #4a5468; background: #1e222c; }
+.arch-frame { flex: 1; width: 100%; border: 0; }
+
+/* Architecture overlay has no bar content besides the close button — float
+   it over the frame instead of reserving a whole empty bar's height. */
+.arch-close-float {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  z-index: 1;
+  background: #16181f;
+}

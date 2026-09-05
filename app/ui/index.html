@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./favicon.ico?v=3" sizes="any" />
+    <title></title>
+    <!-- Pre-paint background, so the window never flashes the wrong theme
+         before the bundle loads. Values mirror --paper / --dark-surface-page
+         in design-system/tokens/colors.css. -->
+    <style>
+      html,body{margin:0;background:#ffffff}
+      html[data-theme='dark'],html[data-theme='dark'] body{background:#15161b}
+      @media (prefers-color-scheme:dark){
+        html:not([data-theme='light']),
+        html:not([data-theme='light']) body{background:#15161b}
+      }
+    </style>
+    <script>
+      // Replay the stored choice before first paint (see src/theme.ts).
+      try {
+        var t = localStorage.getItem('bernay-theme')
+        if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

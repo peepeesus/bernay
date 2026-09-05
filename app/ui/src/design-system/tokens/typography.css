@@ -1,0 +1,36 @@
+/* Bernay — type tokens. */
+:root{
+  /* Families */
+  --font-display:"Junge",Georgia,"Times New Roman",serif;      /* wordmark & serif headings */
+  --font-hand:"Kalam",ui-rounded,"Comic Sans MS",cursive;       /* hand-drawn marker — labels, buttons, placeholders */
+  --font-sans:"Instrument Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; /* clean helper / body */
+
+  /* Weights */
+  --weight-hand-light:300;
+  --weight-hand:400;
+  --weight-hand-bold:700;
+  --weight-sans:400;
+  --weight-sans-medium:500;
+  --weight-sans-semibold:600;
+
+  /* Sizes — anchored to the source (24 / 48 / 64) with a supporting scale */
+  --text-xs:13px;
+  --text-sm:16px;
+  --text-base:20px;
+  --text-md:24px;    /* helper text, button labels (source) */
+  --text-lg:32px;
+  --text-xl:48px;    /* wordmark (source) */
+  --text-2xl:64px;   /* screen placeholder (source) */
+
+  /* Line heights — the sketch runs tight (100%) */
+  --leading-tight:1;
+  --leading-snug:1.2;
+  --leading-body:1.45;
+
+  /* Semantic roles */
+  --type-wordmark:var(--weight-hand) var(--text-xl)/var(--leading-tight) var(--font-display);
+  --type-hero:var(--weight-hand) var(--text-2xl)/var(--leading-tight) var(--font-hand);
+  --type-label:var(--weight-hand-light) var(--text-md)/var(--leading-tight) var(--font-hand);
+  --type-helper:var(--weight-sans) var(--text-md)/var(--leading-snug) var(--font-sans);
+  --type-body:var(--weight-sans) var(--text-base)/var(--leading-body) var(--font-sans);
+}
