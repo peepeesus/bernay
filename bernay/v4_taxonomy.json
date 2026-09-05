@@ -1,0 +1,586 @@
+{
+  "version": 1,
+  "desire_tags": [
+    "survival", "safety", "pleasure", "status", "power", "belonging", "love",
+    "expression", "clarity", "insight", "purpose", "transcendence", "abundance",
+    "discipline", "harmony", "ambition", "intellect", "connection", "material",
+    "freedom", "mastery", "novelty", "comfort", "recognition", "control", "growth"
+  ],
+  "principles": {
+    "schwartz_channeling": "Copy cannot create desire. The mass desire already exists in millions of hearts before the advertiser arrives; the only power of copy is to take that existing current and channel it onto one particular product."
+  },
+  "categories": [
+    {
+      "id": "root_chakra",
+      "family": "chakra",
+      "name": "The Root Center (Muladhara)",
+      "description": "The base station of the body's energy, governing physical survival, material security, and the instinct to stand on solid ground. Appeals here address the fear of losing ground and the relief of a sure foundation.",
+      "keywords": ["security", "stability", "grounded", "safe", "shelter", "savings", "protect", "foundation", "survival", "basics", "home", "reliable", "peace of mind"],
+      "anchor_texts": [
+        "At the base of the spine sleeps the first concern of every living creature: to be fed, to be sheltered, to be safe when night falls. Before a man dreams of glory he must know the floor will hold. Speak first to the ground beneath his feet, for he hears nothing else until that ground is sure.",
+        "The four-petalled lotus at the root is the seat of the element of earth. Here the serpent power lies coiled about the things a body cannot do without: bread, warmth, walls, and rest. The copy that promises these in plain words touches the oldest nerve in the race.",
+        "A prospect whose foundations tremble cannot be sold an ornament. Secure his footing first. Show him the rent paid, the pantry full, the door that locks, and he becomes thereafter a buyer of everything that may be built upon that rock."
+      ],
+      "linked_desires": ["survival", "safety", "comfort"]
+    },
+    {
+      "id": "sacral_chakra",
+      "family": "chakra",
+      "name": "The Sacral Center (Svadhisthana)",
+      "description": "The water center below the navel, seat of appetite, sensation, and delight. It answers to pleasure, fresh experience, and the warmth of intimate company.",
+      "keywords": ["pleasure", "enjoy", "indulge", "taste", "delight", "sensual", "passion", "excitement", "fun", "treat yourself", "new experience", "desire", "romance", "feel good"],
+      "anchor_texts": [
+        "Below the navel dwells the water center, and its element flows toward whatever tastes sweet. Reason may scold, but appetite signs the order blank. The advertiser who can make the mouth water and the skin remember has already written half his sale.",
+        "Man does not live by bread alone; he lives also by the flavor of the bread. Every new pleasure promised, every fresh sensation hinted at, stirs the six-petalled lotus where enjoyment keeps its court, and the hand moves toward the purse before the mind has voted.",
+        "There is a hunger that returns each evening though it was fed at noon. It asks not for survival but for savor: the warm bath, the ripe fruit, the touch of another hand. Copy addressed to this center should glow rather than argue, for its language is sensation and its logic is delight."
+      ],
+      "linked_desires": ["pleasure", "novelty", "connection"]
+    },
+    {
+      "id": "solar_plexus_chakra",
+      "family": "chakra",
+      "name": "The Solar Plexus Center (Manipura)",
+      "description": "The fire center at the navel, the furnace of will, ambition, and command. It is moved by promises of power, standing, and mastery over one's circumstances.",
+      "keywords": ["power", "confidence", "ambition", "control", "status", "winner", "dominate", "achieve", "authority", "respect", "take charge", "success", "drive", "command"],
+      "anchor_texts": [
+        "At the navel burns the city of jewels, the furnace where will is forged. The man ruled by this fire does not ask whether a thing is pleasant; he asks whether it will lift him above the man beside him. Offer him command of his circumstances and he will pay any fee.",
+        "Watch the prospect who reads the testimonial of a rival's success and grows hot behind the eyes. That heat is the third fire of the body demanding its own victory. The wise copywriter does not soothe it; he hands it a ladder.",
+        "Ambition is a flame that eats its own fuel and calls for more. Every headline that says you can be master where you were servant pours oil upon that flame. Speak of control, of advancement, of the corner office and the firm handshake, and the will leans forward to sign."
+      ],
+      "linked_desires": ["power", "status", "control", "ambition"]
+    },
+    {
+      "id": "heart_chakra",
+      "family": "chakra",
+      "name": "The Heart Center (Anahata)",
+      "description": "The middle station where breath and feeling meet, governing affection, fellowship, and peace between persons. It responds to warmth, reunion, and the promise of being loved.",
+      "keywords": ["love", "belonging", "together", "family", "friendship", "warmth", "caring", "community", "reunion", "devotion", "kindness", "harmony", "embrace", "loved ones"],
+      "anchor_texts": [
+        "In the middle of the breast beats the unstruck sound, the drum of fellowship. A man will cross an ocean for profit, but he will cross a burning field for love. Copy that shows him the faces waiting at the table reaches deeper than any figure of interest.",
+        "The heart center asks one question of every offer: will this bring me nearer to my own? The photograph of the child's hand in the father's sells more insurance than a column of actuarial proof, for the buying is done by the breast and merely signed by the hand.",
+        "Loneliness is the quiet epidemic of the crowded city. Whoever promises company that does not leave, a circle that closes around the newcomer, a hearth with a chair kept empty, speaks to the twelve-petalled lotus and is heard above all the noise of the market."
+      ],
+      "linked_desires": ["love", "belonging", "harmony"]
+    },
+    {
+      "id": "throat_chakra",
+      "family": "chakra",
+      "name": "The Throat Center (Vishuddha)",
+      "description": "The center of voice and utterance, by which the inner life is made audible. It is stirred by the chance to speak, to be heard, and to be credited for one's words.",
+      "keywords": ["voice", "speak up", "be heard", "express yourself", "share", "tell your story", "communicate", "authentic", "stand out", "say it", "truth", "creative voice", "platform"],
+      "anchor_texts": [
+        "In the hollow of the throat sits the purifying center, where what was felt becomes what is said. Half the misery of the silent man is not his burden but his muteness. Offer him a voice, a page, a platform, and you have offered him a relief older than medicine.",
+        "Every man carries a speech he has never given. The product that promises utterance, the pen, the course, the stage, the printing press, sells not ink or lessons but the unsealing of a throat long closed, and the price of that unsealing has never once been called too high.",
+        "To be heard is the second hunger of the soul; to be believed is the third. The testimonial works upon the reader because he imagines his own name beneath it, his own words at last in print, his own account credited before witnesses."
+      ],
+      "linked_desires": ["expression", "recognition"]
+    },
+    {
+      "id": "third_eye_chakra",
+      "family": "chakra",
+      "name": "The Brow Center (Ajna)",
+      "description": "The two-petalled center between the brows, the lamp of discernment. It seeks to see plainly, to understand causes, and to know rather than to guess.",
+      "keywords": ["insight", "clarity", "understand", "see clearly", "wisdom", "intuition", "focus", "perception", "truth", "awareness", "figure out", "clear mind", "vision", "knowledge"],
+      "anchor_texts": [
+        "Between the brows hangs the lamp of command, and its single appetite is to see. Confusion is a pain as real as hunger. The advertisement that turns a fog into a map, that names the cause behind the symptom, gives the reader sight, and sight is never returned for refund.",
+        "Men do not pay for information; they pay for the moment the scattered facts fall into one figure. Lead the reader to that small lightning behind the eyes, the click of now I see it, and he will follow your reasoning all the way to the order form out of simple gratitude.",
+        "The inner eye opens when the veil of names is lifted from things. Write so that the prospect understands his own case better than he did before your first sentence, and he will assume, without ever being told, that you also hold the remedy."
+      ],
+      "linked_desires": ["insight", "clarity", "intellect"]
+    },
+    {
+      "id": "crown_chakra",
+      "family": "chakra",
+      "name": "The Crown Center (Sahasrara)",
+      "description": "The thousand-petalled summit where the personal self touches what is beyond it. It answers to meaning, calling, and union with something larger than the day's affairs.",
+      "keywords": ["purpose", "meaning", "transcend", "higher self", "awakening", "enlightenment", "calling", "spiritual", "oneness", "beyond", "fulfillment", "sacred", "legacy", "soul"],
+      "anchor_texts": [
+        "Above the crown of the head the thousand-petalled lotus opens, and through it the small self looks out upon the whole. When bread is won and rank is settled, there remains the question that wakes kings at midnight: to what end? The offer that answers it is beyond price.",
+        "There is a buying that is really a pilgrimage. The man who purchases the retreat, the scripture, the long journey, is not acquiring goods; he is purchasing a window. Write of the summit, not of the staircase, and let the silence between your sentences do the selling.",
+        "Every soul suspects it was issued for a purpose it has not yet read. Copy that whispers your life is a letter still sealed turns merchandise into ministry, and the reader does not feel sold to; he feels summoned."
+      ],
+      "linked_desires": ["transcendence", "purpose"]
+    },
+    {
+      "id": "keter",
+      "family": "sephira",
+      "name": "Keter, the Crown",
+      "description": "The first emanation, the point of pure purpose before form. It stands for the why above every what, the calling that precedes all plans.",
+      "keywords": ["purpose", "calling", "mission", "vision", "why", "destiny", "higher purpose", "meaning", "ultimate goal", "north star", "devotion", "beyond self"],
+      "anchor_texts": [
+        "Keter is the crown that no head wears, the will before there is anyone to will it. In the market as in the heavens, everything descends from a first intention. The brand that knows its single why stands above its own merchandise as the crown stands above the head.",
+        "Before the first product was made there was the reason it should be made. The ancients called this the most hidden of all hidden things. The customer cannot name it either, yet he feels at once when an offer proceeds from purpose and when it proceeds from appetite.",
+        "All the lamps below borrow their oil from the highest. Speak to a man of his destiny, of the work only he was issued to do, and you address the crown point of his soul, where price is not an objection because purpose is not negotiable."
+      ],
+      "linked_desires": ["purpose", "transcendence"]
+    },
+    {
+      "id": "chokhmah",
+      "family": "sephira",
+      "name": "Chokhmah, Wisdom",
+      "description": "The flash of primal insight, the seed of an idea before it is reasoned out. It prizes the sudden seeing that arrives whole and unargued.",
+      "keywords": ["insight", "flash of genius", "idea", "epiphany", "intuition", "spark", "revelation", "sudden clarity", "inspiration", "breakthrough", "first principle", "vision"],
+      "anchor_texts": [
+        "Wisdom comes as lightning, not as ledger. Chokhmah is the seed point where the whole oak is present in a grain. The great headline works the same way: one flash and the reader possesses the entire argument before a single proof has been read.",
+        "There is a knowing that precedes thinking, as the flash precedes the thunder. The prospect calls it a hunch and trusts it above committees. Write the line that strikes like that, whole and sudden, and the slower faculties will spend the afternoon agreeing with it.",
+        "The fathers said wisdom is found from nothing. Every inventor knows the hour: the bath, the walk, the half sleep, when the answer arrives unearned and entire. Sell to that hour. Promise the reader his own flash of seeing, and he will gladly buy the flint."
+      ],
+      "linked_desires": ["insight", "clarity"]
+    },
+    {
+      "id": "binah",
+      "family": "sephira",
+      "name": "Binah, Understanding",
+      "description": "The great mother of form, which receives the flash and builds it into structure, system, and consequence. It prizes thoroughness, definition, and disciplined thought.",
+      "keywords": ["understanding", "structure", "system", "framework", "analysis", "method", "thorough", "reasoned", "organized", "discipline", "define", "work it out", "deep dive"],
+      "anchor_texts": [
+        "Understanding is the palace built around the lightning. Binah takes the seed of wisdom and gives it walls, rooms, and a roof: definitions, sequences, consequences. The buyer of this temperament wants the syllabus before the sermon; give him the architecture and he will live in it.",
+        "The flash convinces for a moment; the structure convinces for a lifetime. Where wisdom says behold, understanding says therefore. Copy for the deliberate mind must march in order: first this, then this, hence that, until the conclusion is not merely accepted but inhabited.",
+        "The third emanation is called the mother because she gives body to what was only light. So with the prospect who asks how, precisely, and in what order. Honor the question. Number the steps. Discipline in the telling is read as discipline in the making."
+      ],
+      "linked_desires": ["intellect", "discipline"]
+    },
+    {
+      "id": "chesed",
+      "family": "sephira",
+      "name": "Chesed, Mercy",
+      "description": "The sphere of overflowing generosity, expansion without stint. It stands for abundance, open-handed giving, and love that enlarges whatever it touches.",
+      "keywords": ["abundance", "generosity", "giving", "overflow", "plenty", "blessing", "bonus", "free gift", "open-handed", "prosperity", "grace", "more than enough", "lavish"],
+      "anchor_texts": [
+        "Chesed is the open hand of the universe, the loving kindness that gives before it is asked. The merchant who serves first, the free sample, the unstinting guarantee, the extra measure pressed down and running over, borrows that gesture, and the customer feels blessed rather than billed.",
+        "Abundance answers to abundance. The cramped offer breeds a cramped response; the lavish offer enlarges the buyer's own hand. Promise plenty, demonstrate plenty, give plenty away, and the fourth sphere does the arithmetic in your favor.",
+        "There is a love that expands whatever it touches, as the tide lifts every boat in the harbor. Write from it. Let the reader feel that your interest is in his increase, his table, his children's portion, and his trust will arrive well before your invoice."
+      ],
+      "linked_desires": ["abundance", "love"]
+    },
+    {
+      "id": "gevurah",
+      "family": "sephira",
+      "name": "Gevurah, Severity",
+      "description": "The sphere of restraint, judgment, and rigor, which prunes so the vine may bear. It prizes discipline, firm limits, and strength under law.",
+      "keywords": ["discipline", "rigor", "strength", "boundaries", "cut back", "focus", "judgment", "strict", "no excuses", "restraint", "tough love", "standards", "willpower"],
+      "anchor_texts": [
+        "Gevurah is the pruning knife of heaven. Mercy without severity drowns the garden. The prospect who has failed by softness knows this in his bones; offer him the strict regimen, the fixed hour, the rule that does not bend, and he will thank you for the rod.",
+        "Strength is desire under law. Every program of discipline sells the same secret pleasure: the clean line drawn, the refusal kept, the appetite mastered and made to pull the plow. Write with short words and hard edges, for the style itself is the proof of the promise.",
+        "The fifth sphere teaches that limitation is a gift. The deadline, the limited lot, the doors that close at midnight: these are not tricks but mercies, for the unbounded choice paralyzes the will and the firm boundary sets it moving."
+      ],
+      "linked_desires": ["discipline", "control"]
+    },
+    {
+      "id": "tiferet",
+      "family": "sephira",
+      "name": "Tiferet, Beauty",
+      "description": "The central sphere where mercy and severity are reconciled into harmony. It stands for balance, proportion, and the radiance of a thing rightly ordered.",
+      "keywords": ["harmony", "balance", "beauty", "proportion", "centered", "integration", "wholeness", "elegance", "radiance", "well-rounded", "golden mean", "equilibrium"],
+      "anchor_texts": [
+        "Tiferet stands at the center of the tree as the heart stands in the body, reconciling the open hand and the closed. Beauty is nothing else: severity and mercy in right proportion. The page that breathes, the offer that balances boldness with candor, sells by its very symmetry.",
+        "Men trust the harmonious as they trust the level floor. A claim too loud falls over on one side, a claim too timid on the other; the line that stands balanced between them is received as truth before it has even been examined.",
+        "The sixth emanation is called beauty because it is seen from every other sphere. So the well-made thing advertises itself: the stitching, the finish, the fair dealing, each part agreeing with each. Show the agreement and praise becomes unnecessary."
+      ],
+      "linked_desires": ["harmony", "recognition"]
+    },
+    {
+      "id": "netzach",
+      "family": "sephira",
+      "name": "Netzach, Victory",
+      "description": "The sphere of endurance and triumph, the force that repeats its blow until the wall gives. It prizes persistence, ambition, and the long campaign won.",
+      "keywords": ["victory", "endurance", "persistence", "never quit", "win", "triumph", "keep going", "stamina", "long game", "conquer", "prevail", "grit", "champion"],
+      "anchor_texts": [
+        "Netzach is victory of the long kind, the water that wears the stone. The seventh sphere does not strike once; it returns each morning. So with the prospect's ambition: he does not want a lottery, he wants a campaign he can win by enduring. Sell him the war, not the wager.",
+        "Every master was first a man who refused to stop. The promise that endures in advertising is not effortless gain but earned conquest: the course completed, the scales obeyed, the record broken on the hundredth attempt. Persistence is itself a desire; arm it.",
+        "Eternity is in the name of this sphere, for the lasting outlasts the brilliant. Tell the reader plainly: most men quit at the third week, and the prize is parked just past the fifth. He will sign, for ambition loves a finish line set a little beyond the quitters."
+      ],
+      "linked_desires": ["ambition", "mastery"]
+    },
+    {
+      "id": "hod",
+      "family": "sephira",
+      "name": "Hod, Splendor",
+      "description": "The sphere of articulate intellect, where force is translated into language, number, and craft. It prizes the well-said, the well-reasoned, and the well-presented.",
+      "keywords": ["articulate", "eloquence", "communication", "logic", "detail", "craft", "precision", "well said", "presentation", "smart", "wit", "explain", "numbers"],
+      "anchor_texts": [
+        "Hod is splendor: the glory of a thing perfectly said. Where Netzach hammers, Hod persuades; it is the scribe of the tree, the sphere of the orator and the bookkeeper alike. The reader of this temperament buys from whoever explains best, and counts a clear sentence as a credential.",
+        "There is a pleasure of the mind as sharp as any of the body: the apt word, the exact figure, the argument that closes like a well-made box. Copy can offer that pleasure in its own person. Write splendidly about a plain thing and the splendor is transferred to the thing.",
+        "The eighth sphere governs the message itself. Every demonstration, every chart, every reason-why advertisement is its liturgy. Honor it by precision: the man who says seventeen ways is believed; the man who says many ways is filed away with the poets."
+      ],
+      "linked_desires": ["intellect", "expression"]
+    },
+    {
+      "id": "yesod",
+      "family": "sephira",
+      "name": "Yesod, Foundation",
+      "description": "The ninth sphere, the channel through which all the upper influences pour into the world. It stands for connection, intimacy, and the trusted conduit between persons.",
+      "keywords": ["connection", "bond", "trust", "intimacy", "bridge", "channel", "relationship", "community", "network", "belonging", "rapport", "inner circle", "stay in touch"],
+      "anchor_texts": [
+        "Yesod is the foundation, the pipe through which every higher water reaches the garden. In commerce its name is relationship. The list, the club, the correspondence kept warm: these are conduits, and the merchant who owns the channel owns the harvest of every season.",
+        "Nothing reaches the kingdom except through the foundation. A truth with no messenger is a treasure in a locked room. Build the bond first, the familiar voice, the letter answered, the name remembered, and whatever you pour in afterward arrives already trusted.",
+        "The ninth sphere is called the righteous one, for it gives over everything it receives. So does the friend who recommends, the member who brings a member. Belonging is the strongest of all distribution; men accept from their circle what they would suspect from a stranger."
+      ],
+      "linked_desires": ["connection", "belonging"]
+    },
+    {
+      "id": "malkuth",
+      "family": "sephira",
+      "name": "Malkuth, the Kingdom",
+      "description": "The tenth sphere, the world of result, where every higher intention must finally cash out in matter. It prizes the tangible, the delivered, and the comfortable household.",
+      "keywords": ["tangible", "results", "delivered", "in hand", "practical", "real world", "material", "own it", "physical", "comfort", "household", "goods", "bottom line", "made well"],
+      "anchor_texts": [
+        "Malkuth is the kingdom: the parcel on the doorstep, the coin in the drawer, the chair that holds you at the end of the day. All the tree above it is rumor until it lands here. The buyer's final question belongs to this sphere: what, exactly, will be in my hands, and when?",
+        "The ancients said the crown is in the kingdom and the kingdom in the crown. Translation for the advertiser: your loftiest promise must survive the unboxing. Describe the weight, the grain, the finish, the fit, for matter is the only witness the tenth sphere will hear.",
+        "There is a holiness of the household: the stocked shelf, the warm room, the tool that works the first time. Do not be ashamed to sell comfort plainly. The kingdom is where the soul actually lives, and its rent is paid in goods that keep their word."
+      ],
+      "linked_desires": ["material", "comfort"]
+    },
+    {
+      "id": "innocent",
+      "family": "archetype",
+      "name": "The Innocent",
+      "description": "The figure of trust and unspoiled beginnings, who believes the world can be simple, safe, and good. It buys cleanliness, simplicity, and promises kept.",
+      "keywords": ["pure", "simple", "honest", "clean", "trust", "wholesome", "gentle", "safe", "natural", "easy", "fresh start", "goodness", "no surprises", "peace of mind"],
+      "anchor_texts": [
+        "There lives in every grown person a child who still believes the label. The innocent does not want seventeen options and a footnote; he wants the white package, the plain word, the firm that has never broken a promise. Sell him simplicity and keep faith with him forever.",
+        "The first figure of the soul is the unwounded one, who remembers the garden. Copy in this key is washed and morning-lit: short words, round vowels, nothing hidden. One whiff of cleverness and the spell is broken, for innocence trusts everything except a wink.",
+        "Goodness is a feature. The soap that is only soap, the food with five ingredients, the policy in plain English: these comfort a buyer wearied by fine print. Promise him that nothing here will need to be doubted, and you have promised the thing he misses most."
+      ],
+      "linked_desires": ["safety", "harmony", "comfort"]
+    },
+    {
+      "id": "everyman",
+      "family": "archetype",
+      "name": "The Everyman",
+      "description": "The plain neighbor who asks only to fit in and be dealt with squarely. It distrusts airs and buys what ordinary folks like itself already use.",
+      "keywords": ["ordinary", "down to earth", "everyone", "neighbor", "practical", "affordable", "no frills", "folks", "common sense", "just like you", "regular", "relatable", "fair deal"],
+      "anchor_texts": [
+        "The everyman reads the advertisement looking for one face: his own. He does not wish to be a king or a pioneer; he wishes to be a sound man among sound men, getting honest goods at a fair figure. Write as a neighbor talks across a fence, and he is yours.",
+        "Beware of splendor with this soul; it smells of the swindle. He trusts the worn counter, the shirtsleeve testimony, the phrase folks around here. Show him that thousands of plain people quietly use the thing, and the herd's warm shoulder does your closing for you.",
+        "Belonging is his bread. To be the only man on the block without the proven article is a small exile; to be one of the many who chose sensibly is home. Number the users, name the towns, and let the multitude make the argument."
+      ],
+      "linked_desires": ["belonging", "connection", "comfort"]
+    },
+    {
+      "id": "hero",
+      "family": "archetype",
+      "name": "The Hero",
+      "description": "The figure of the trial accepted, who proves worth by effort against resistance. It buys challenges, training, and the equipment of victory.",
+      "keywords": ["challenge", "overcome", "train", "push harder", "prove yourself", "discipline", "victory", "strength", "courage", "rise", "no shortcuts", "earn it", "compete", "beat your best"],
+      "anchor_texts": [
+        "The hero is not the man without fear but the man who has an appointment with the dragon and keeps it. Copy in this key does not promise ease; it promises a worthy fight and the trophy after. Tell him it will be hard, and watch the right reader straighten his back.",
+        "Every record book is a psalm to this archetype. He measures himself against his own yesterday and calls the soreness proof. Sell him the program that demands, the coach that will not flatter, the iron that does not lie; comfort is the one thing he will return for refund.",
+        "In the old stories the sword must be earned before it is wielded. So position the product: not a crutch but a weapon, awarded to those in training. The phrase for those who do the work filters out the idle and flatters the worthy in a single stroke."
+      ],
+      "linked_desires": ["mastery", "ambition", "recognition"]
+    },
+    {
+      "id": "caregiver",
+      "family": "archetype",
+      "name": "The Caregiver",
+      "description": "The protector and nourisher, moved first by the welfare of others. It buys whatever shields, feeds, heals, or eases the ones in its charge.",
+      "keywords": ["protect", "care for", "nurture", "family first", "gentle", "safe for kids", "comfort", "support", "watch over", "peace of mind", "devotion", "tender", "provide", "help others"],
+      "anchor_texts": [
+        "The caregiver does not ask what the thing will do for her; she asks what it will do for them. Her purse opens outward. Address the child's cough, the husband's long drive, the mother's stairs, and you have addressed her own deepest interest by never once mentioning it.",
+        "Guardianship is a desire as fierce as hunger. The advertisement that shows harm averted, the rail on the crib, the lamp burning over the porch, the policy that pays whether or not, speaks to the breast that would stand between its loved ones and the whole night.",
+        "She is suspicious of luxury for herself and limitless for her charges. Price is read differently here: not cost, but provision. Frame the purchase as a duty of love faithfully performed, and the caregiver will deny herself in order to afford it."
+      ],
+      "linked_desires": ["love", "safety", "connection"]
+    },
+    {
+      "id": "explorer",
+      "family": "archetype",
+      "name": "The Explorer",
+      "description": "The restless soul that suffocates inside fences and is fed by the open road. It buys maps, tickets, gear, and any promise of unwalled horizon.",
+      "keywords": ["adventure", "explore", "freedom", "open road", "wander", "discover", "journey", "escape", "wild", "off the map", "new horizons", "trail", "passport", "roam"],
+      "anchor_texts": [
+        "The explorer's sickness is the wall, and his medicine is the horizon. He does not buy goods; he buys distance. Show him the road before the radiator, the ridge before the boot, write the word freedom where another would print a fence, and his bags begin packing themselves.",
+        "Routine is a small death to this soul. The same desk, the same street, the same Sunday: each repetition tightens the collar a little. The offer that promises elsewhere, the course that becomes a ticket, the gear rated for weather he has not met, loosens it a notch.",
+        "Old maps drew dragons at the edge of the known, and the explorer read those dragons as invitations. Let your copy keep an unmapped margin: not everything described, something left to find. Certainty comforts the other archetypes; this one pays for the blank space."
+      ],
+      "linked_desires": ["freedom", "novelty", "growth"]
+    },
+    {
+      "id": "rebel",
+      "family": "archetype",
+      "name": "The Rebel",
+      "description": "The breaker of stale rules, who finds identity in defiance of the respectable. It buys whatever lets it overturn, shock, or secede from the herd.",
+      "keywords": ["rebel", "break the rules", "disrupt", "against the grain", "outlaw", "defy", "revolution", "not for everyone", "unconventional", "raw", "untamed", "refuse", "dangerous"],
+      "anchor_texts": [
+        "The rebel reads the advertisement of the respectable and buys the opposite. His loyalty is to the locked door, his religion the rule worth breaking. Tell him the committee disapproves, that this is not for everyone, and you have written his invitation in the only ink he honors.",
+        "Every age keeps a figure whose office is refusal. He suspects polish, despises permission, and hears the word should as a dare. Copy for him must burn its own bridge: short, careless of convention, glad of enemies. The brands he loves are the ones somebody tried to ban.",
+        "Beneath the leather there is doctrine: that the tame life is the sold life, that the herd's comfort costs the soul. The product is sacramental here, a flag of secession from the ordinary. Sell the breaking, not the thing; the thing is merely the hammer."
+      ],
+      "linked_desires": ["freedom", "power", "expression"]
+    },
+    {
+      "id": "lover",
+      "family": "archetype",
+      "name": "The Lover",
+      "description": "The devotee of beauty, closeness, and the heightened moment. It buys whatever makes it more desirable, the hour more sweet, or the beloved more near.",
+      "keywords": ["romance", "desire", "beauty", "attraction", "intimacy", "passion", "seduction", "irresistible", "devotion", "chemistry", "allure", "cherish", "date night", "adore"],
+      "anchor_texts": [
+        "The lover does not purchase the perfume; she purchases the pause in the conversation when she enters the room. All goods in this key are mirrors and bridges: mirrors that promise I am lovely, bridges that promise I will be met. Write to the evening, not to the bottle.",
+        "Desire is attention raised to devotion. The archetype lives for the particular: this face, this song, this table for two by the window. Copy must slow down accordingly, lingering on textures and candlelight, for haste is the one obscenity in the lover's grammar.",
+        "Every heart keeps a feast day it is waiting to be given. The advertiser who says tonight, make the ordinary hour an occasion, sells more than chocolate and silk; he sells the beloved's widened eyes, and there has never been resistance to that price."
+      ],
+      "linked_desires": ["love", "pleasure", "connection"]
+    },
+    {
+      "id": "creator",
+      "family": "archetype",
+      "name": "The Creator",
+      "description": "The maker possessed by the unmade thing, who must give form to what it imagines. It buys tools, materials, and any promise of finer craft.",
+      "keywords": ["create", "make", "build", "design", "craft", "imagination", "studio", "handmade", "express", "original", "blank canvas", "tools", "artisan", "bring to life"],
+      "anchor_texts": [
+        "The creator walks through the world seeing its unfinished portions. A blank page is not empty to him; it is loud. Sell him the instrument worthy of the vision, the brush that obeys, the machine that keeps up, and frame every feature as one less obstacle between him and the work.",
+        "Making is his worship and revision his penance. He fears one hell only: the idea that died unexpressed. The course, the kit, the finer tool, each is purchased as a rescue party sent in after something trapped inside him. Speak of what he will finish, not of what he will own.",
+        "To the maker, materials are scripture written in advance of the sermon. Walnut, brass, good paper, clean type: list them lovingly and he hears the finished piece. Praise his taste by the depth of your details, for the creator judges the seller's craft before trusting him with his own."
+      ],
+      "linked_desires": ["expression", "mastery", "novelty"]
+    },
+    {
+      "id": "jester",
+      "family": "archetype",
+      "name": "The Jester",
+      "description": "The spirit of play that refuses solemnity, healing by laughter what lectures cannot reach. It buys fun, surprise, and the permission to be unserious.",
+      "keywords": ["fun", "funny", "play", "laugh", "silly", "witty", "joke", "lighten up", "surprise", "delight", "party", "irreverent", "whimsy", "good time"],
+      "anchor_texts": [
+        "The jester is the court's one honest man, licensed by laughter. He will not sit through your sermon, but he will repeat your joke to ten friends at no charge. Copy in this key earns its keep by delight; the smile comes first and the order blank rides in on it.",
+        "Solemnity is a tax the jester refuses to pay. Life is heavy enough without the advertisements adding freight. The brand that winks, that puns on its own name, that prints a small absurdity where the legal line should be, is forgiven everything and remembered everywhere.",
+        "Play is older than work and will outlive it. Beneath every buttoned coat is somebody who once made a trumpet of a comb. Give the reader one unguarded laugh and you have been introduced; people buy from those with whom they have laughed, as they dine with friends."
+      ],
+      "linked_desires": ["pleasure", "novelty", "connection"]
+    },
+    {
+      "id": "sage",
+      "family": "archetype",
+      "name": "The Sage",
+      "description": "The seeker and keeper of knowledge, who trusts study above slogans. It buys evidence, instruction, and the standing of the well-informed.",
+      "keywords": ["knowledge", "learn", "research", "evidence", "study", "expert", "facts", "understand", "wisdom", "analysis", "source", "informed", "truth"],
+      "anchor_texts": [
+        "The sage does not ask whether the claim is loud but whether it is true. He reads the footnote first. Copy for him is a lecture hall: state the mechanism, cite the trial, show the working. He rewards the teacher with his custom and punishes the shouter with his silence.",
+        "Knowledge is his treasure and doubt his discipline. Flattery slides off him, but a well-built argument is irresistible; he has been known to buy a thing chiefly because its explanation was elegant. Respect his intelligence and he will not check your arithmetic twice.",
+        "In every village the others go to one hut to ask. That standing, the consulted one, is the sage's quiet wage. Sell him not the book but the mastery it confers: to be the friend who already understands. He buys his next authority with the same coin as his last."
+      ],
+      "linked_desires": ["insight", "intellect", "clarity"]
+    },
+    {
+      "id": "magician",
+      "family": "archetype",
+      "name": "The Magician",
+      "description": "The agent of transformation, who knows the hidden laws by which one thing becomes another. It buys catalysts, systems, and the promise of changed states.",
+      "keywords": ["transform", "transformation", "secret", "hidden", "unlock", "alchemy", "manifest", "ritual", "catalyst", "breakthrough", "power within", "change your life", "reveal", "mystery"],
+      "anchor_texts": [
+        "The magician's creed is that the visible is operated from the invisible. He buys levers for the unseen machinery: the method, the formula, the practice that turns lead hours into golden ones. Name the hidden law your product obeys, and he will pay to stand at the switch.",
+        "Transformation is the only product this archetype has ever bought. Before and after are the two halves of his testament. Show the gray man entering the water and the bright man leaving it, and explain just enough of the mechanism to prove it is law and not luck.",
+        "Words, to the magician, are not labels but instruments; rightly arranged they alter the arrangement of things. He is the natural reader of advertising, your fellow craftsman across the page. Write your copy as an incantation with a guarantee, and he will recognize the guild."
+      ],
+      "linked_desires": ["transcendence", "insight", "power"]
+    },
+    {
+      "id": "ruler",
+      "family": "archetype",
+      "name": "The Ruler",
+      "description": "The orderer of realms, who carries responsibility as identity and prizes command, continuity, and the trappings of legitimate authority. It buys control, order, and the signals of rank.",
+      "keywords": ["leadership", "authority", "control", "executive", "command", "legacy", "order", "premium", "exclusive", "first class", "standards", "take charge", "boardroom", "prestige"],
+      "anchor_texts": [
+        "The ruler does not buy goods; he appoints them. Each acquisition is a minister that must keep order in its province: the watch that governs the day, the car that announces the office, the desk from which the weather of a household is decided. Sell him administration, not ornament.",
+        "Authority dreads one thing above rebellion, and that is disorder. The offer that promises everything in its place, accounts reconciled, staff aligned, contingencies provided for, speaks to the king's oldest nightmare and sells him his crown back nightly.",
+        "Rank must be legible or it is not rank. The ruler pays the premium precisely because it is a premium; the price is part of the product. Write with protocol, never with slang, and let the word standard appear where lesser copy would say deal."
+      ],
+      "linked_desires": ["control", "power", "status"]
+    },
+    {
+      "id": "unaware",
+      "family": "awareness",
+      "name": "Stage One: Unaware",
+      "description": "The prospect feels no problem and seeks no solution; the discomfort, if any, is unnamed background. Copy must begin with story, identity, or secret, never with the product or the claim.",
+      "keywords": ["just tired lately", "that's normal", "everyone has that", "never thought about it", "doing fine", "comes with age", "always been this way", "didn't know", "out of nowhere", "why am i so", "lately", "no big deal"],
+      "anchor_texts": [
+        "He has the trouble but not the name for it. Ask him directly and he will tell you, honestly, that nothing is wrong. Begin with the headache he calls normal, the stiffness he calls age, and the advertisement must arrive as a story he would read anyway, never as a salesman at the door.",
+        "To the unaware market no claim can be made, for a claim answers a question no one has asked. Open instead with a mirror: a character so like the reader that he leans in. Identification first, diagnosis later, and the product not until the reader himself begins to suspect.",
+        "The deepest market is the one that does not know it is a market. Here copy works as the physician's first quiet questions work: how long has it been this way, and did you always wake so tired? Name the unnamed and the reader will feel discovered, not solicited."
+      ],
+      "linked_desires": ["comfort", "safety", "novelty"]
+    },
+    {
+      "id": "problem_aware",
+      "family": "awareness",
+      "name": "Stage Two: Problem Aware",
+      "description": "The prospect feels the pain and can name it, but does not know a remedy exists. Copy leads with the problem itself, drawn sharper than the prospect could draw it, then turns toward hope.",
+      "keywords": ["sick of", "tired of", "fed up", "why does it always", "can't sleep", "keeps getting worse", "nothing helps", "how do i stop", "struggling with", "is it just me", "i hate", "frustrated", "what's wrong with me"],
+      "anchor_texts": [
+        "She can name the wound but not the medicine. Her searching reads like a diary: why does it, how do I stop, is it just me. Meet her there. The headline that describes her Tuesday better than she could herself earns the right to mention, gently, that a door exists.",
+        "Lead with the knife, not the bandage. The problem-aware prospect rewards precision of pain: the ceiling stared at past midnight, the third failed budget, the stairs taken one at a time. Each exact detail is a credential, proof you have been inside the house before offering to fix it.",
+        "Hope is the hinge of this stage. The reader knows the ache and assumes it is permanent; your first task is not to sell but to overturn that verdict. Say it can be otherwise, and prove someone like her crossed over, before so much as whispering what the boat is called."
+      ],
+      "linked_desires": ["safety", "clarity", "control"]
+    },
+    {
+      "id": "solution_aware",
+      "family": "awareness",
+      "name": "Stage Three: Solution Aware",
+      "description": "The prospect knows results like his are achievable and is comparing roads, but does not yet know your vehicle. Copy names the desired outcome and stakes out why one approach beats the rest.",
+      "keywords": ["best way to", "how to fix", "what works for", "options", "compare", "alternatives", "which is better", "top rated", "reviews of", "does it really work", "methods", "vs", "worth trying"],
+      "anchor_texts": [
+        "He stands at the crossroads with a map of many roads and no carriage. He says best way to and which one works, and he compares the diets, the methods, the schools. Copy here is a debate among approaches; win the argument for your category before your brand so much as bows.",
+        "The solution-aware prospect has graduated from whether to which. He no longer needs convincing that the mountain can be climbed; he is pricing routes. Set the criteria of choice yourself, what to demand and what to refuse, and the judging is half finished in your favor.",
+        "Name the outcome in its best clothes: the suit refitted, the shop full of customers, the morning without the pill. Then divide the ways of getting there and quietly stand beside the soundest. He came looking for a verdict; the copy that organizes his comparison becomes his counsel."
+      ],
+      "linked_desires": ["clarity", "control", "growth"]
+    },
+    {
+      "id": "product_aware",
+      "family": "awareness",
+      "name": "Stage Four: Product Aware",
+      "description": "The prospect knows your product exists but is not yet sold on its superiority or sincerity. Copy carries proof, demonstration, and the answers to objections silently held.",
+      "keywords": ["is it worth it", "does it actually work", "real reviews", "before and after", "ingredients", "guarantee", "refund policy", "pricing", "free trial", "versus", "testimonials", "fine print", "any catch", "shipping"],
+      "anchor_texts": [
+        "She knows your name and has not yet trusted it. Her questions have grown specific: what is in it, what does it cost, who says so besides you. This is the hour of evidence, the demonstration, the affidavit, the guarantee with teeth, for at this stage doubt is the only competitor left.",
+        "The product-aware reader holds your promise in one hand and her past disappointments in the other. Every claim must now carry its own proof on its back: the figure, the photograph, the named customer in the named town. Generalities, forgivable earlier, are fatal here.",
+        "Answer the objection before it is voiced and it dies privately, with no pride to defend. Too dear: show the cost per day. Tried before: show what is different this time. Sounds too good: show the warts honestly. The unanswered question is the only reason she has not bought."
+      ],
+      "linked_desires": ["safety", "clarity", "control"]
+    },
+    {
+      "id": "most_aware",
+      "family": "awareness",
+      "name": "Stage Five: Most Aware",
+      "description": "The prospect knows the product, wants it, and waits only for the right moment or terms. Copy is short: the deal, the deadline, the reminder, the easy door.",
+      "keywords": ["buy now", "discount code", "sale ends", "back in stock", "free shipping", "order again", "bundle", "coupon", "where to buy", "restock", "subscribe and save", "in stock", "checkout", "price drop"],
+      "anchor_texts": [
+        "He needs no persuasion, only an occasion. He has read the reviews, priced the thing twice, and left it in the basket like a dog tied outside a shop. The whole art at this stage is the nudge: the price with a date on it, the last few in stock, the button that remembers his card.",
+        "For the most aware, long copy is an insult and silence is a lost sale. The telegram is the model: the name, the offer, the hour it expires. State the deal plainly and make the path from desire to receipt exactly one step long, for every extra step is a tax on a decided mind.",
+        "The decided customer asks only two favors: make it easy and make it now. The reorder blank in the package, the standing subscription, the reminder timed to the empty jar, these are courtesies, not pressure. Serve the decision he has already made and he will thank you with habit."
+      ],
+      "linked_desires": ["abundance", "control", "comfort"]
+    },
+    {
+      "id": "sophistication_1",
+      "family": "sophistication",
+      "name": "Sophistication One: The Virgin Market",
+      "description": "The market has never heard the claim before; the need is fresh and unworked. The simple direct promise, stated plainly and first, captures it whole.",
+      "keywords": ["introducing", "at last", "new", "now you can", "announcing", "finally", "first ever", "simple promise", "direct claim", "never before", "just arrived", "plain offer"],
+      "anchor_texts": [
+        "When the market is new, the plainest sentence is the strongest. Say what it does, say it first, and stop. Lose the fat. Grow the hair. Double the pay. In a virgin market the bare claim lands like news, because it is news, and the first voice to state the desire owns it.",
+        "No mechanism, no poetry, no proof beyond the promise: the untouched market requires none of it. The prospect has waited all his life for someone to say such a thing exists. Complication at this stage is not sophistication but stammering. One claim, one headline, one door.",
+        "The first advertiser in a field writes on a clean slate, and his chalk squeaks loudest. He needs neither superlative nor secret; the simple announcement carries all the force of revelation. Later comers will need machinery. He needs only to arrive and to speak."
+      ],
+      "linked_desires": ["novelty", "clarity"]
+    },
+    {
+      "id": "sophistication_2",
+      "family": "sophistication",
+      "name": "Sophistication Two: The Enlarged Claim",
+      "description": "Competitors have copied the direct claim, so it must now be outbid: bigger, faster, more complete than the same promise next door. The desire is unchanged; the scale of the promise grows.",
+      "keywords": ["bigger", "better", "faster", "twice the", "in half the time", "more powerful", "strongest", "guaranteed results", "number one", "improved", "maximum", "extra strength", "outperforms"],
+      "anchor_texts": [
+        "The second stage begins the morning a competitor repeats your claim. The market still believes; it merely shops among believers. So the promise swells: not weight lost but weight lost twice as fast, not pay raised but pay doubled. Enlarge, or become the small print under another's headline.",
+        "Where the first man said it works, the second must say it works best. The bidding of claims is a true auction with true escalation, and there is profit in it for a season: the prospect, still hungry, awards himself to the largest believable number on the street.",
+        "A caution: the enlarged claim spends the market's faith like a young heir. Each round of bigger and faster draws on a credit of belief that no one is paying back. Push the figure as far as proof can follow and not one inch past, for the third stage is already in the post."
+      ],
+      "linked_desires": ["abundance", "ambition", "status"]
+    },
+    {
+      "id": "sophistication_3",
+      "family": "sophistication",
+      "name": "Sophistication Three: The Mechanism",
+      "description": "Claims alone have worn out; the market now asks how. A new mechanism, the named process behind the promise, becomes the headline itself and restores belief.",
+      "keywords": ["the secret", "how it works", "breakthrough", "formula", "method", "patented", "discovery", "unique process", "the science behind", "works differently", "system", "ingredient", "mechanism"],
+      "anchor_texts": [
+        "There comes a day when the market has heard every size of promise and believes none of them. It does not want a louder claim; it wants a reason the claim could be true. Enter the mechanism: the named process, the special ingredient, the new principle. The how becomes the headline.",
+        "At the third stage the prospect is a juror who has been deceived before, and he acquits only on mechanism. The claim that carries its own explanation outsells the claim that merely shouts; the picture of the process at work, the diagram, the named principle, is the modern affidavit.",
+        "Name the device and you revive the dead claim. The same old promise, weight lost, pay raised, skin cleared, walks again the moment it is harnessed to a fresh engine with a fresh name. The market never tires of results; it tires only of assertions without machinery."
+      ],
+      "linked_desires": ["insight", "novelty", "clarity"]
+    },
+    {
+      "id": "sophistication_4",
+      "family": "sophistication",
+      "name": "Sophistication Four: The Mechanism Elaborated",
+      "description": "Rival mechanisms now crowd the field, so yours must be enlarged, easier, faster, or proven deeper than theirs. Specifics, tests, and demonstrated superiority of process carry the day.",
+      "keywords": ["clinically proven", "studies show", "tested", "data", "second generation", "improved formula", "faster acting", "easier than", "demonstrated", "independently verified", "refined", "evidence", "trial results"],
+      "anchor_texts": [
+        "Now every bottle on the shelf has a secret, and the secrets shout each other down. The fourth stage is the contest of mechanisms: yours must work faster, reach deeper, demand less. The claim about the product gives way to the claim about the process, enlarged and armored with proof.",
+        "Where one mechanism was a marvel, five are a market. The buyer compares engines now, not promises, so the copy turns engineer: tested against, proven in trials, improved upon the old principle. Specificity is the weapon; the brand with the most concrete process wins the abstract war.",
+        "Elaborate or evaporate. The second man with a mechanism cannot merely repeat it; he must present the mechanism perfected, the old secret completed, the missing step supplied. Every chart and percentage is a soldier here, and vagueness deserts to the competition."
+      ],
+      "linked_desires": ["intellect", "clarity", "control"]
+    },
+    {
+      "id": "sophistication_5",
+      "family": "sophistication",
+      "name": "Sophistication Five: The Exhausted Market",
+      "description": "Every claim and mechanism has been heard and discounted; the prospect is deaf to promises. What remains is identification: the brand as a place to belong, an experience, a self the buyer recognizes.",
+      "keywords": ["join us", "people like you", "this is who we are", "community", "movement", "lifestyle", "experience", "ritual", "story", "belong", "identity", "tribe", "stand for something"],
+      "anchor_texts": [
+        "In the exhausted market the prospect has heard everything twice and believes nothing once. Promises bounce off; mechanisms bore. What remains is the oldest sale of all: himself. The brand becomes a mirror and a flag, and the buyer joins it as one joins a faith, by recognition.",
+        "At the fifth stage you do not sell to the market; you gather it. The copy stops arguing and starts belonging: this is who we are, this is the hour we keep, these are our people. The product retires to the second sentence, and identification, unprovable and unanswerable, carries the first.",
+        "When claims die, ceremony lives. The worn-out market will still pay for an experience it can feel and a company it can be seen in: the bottle as badge, the store as clubhouse, the purchase as a small rite of self-description. Sell the congregation and the hymnal sells itself."
+      ],
+      "linked_desires": ["belonging", "recognition", "transcendence"]
+    },
+    {
+      "id": "physiological",
+      "family": "maslow",
+      "name": "Physiological Needs",
+      "description": "The floor of the hierarchy: food, water, sleep, warmth, and bodily relief. Until these are answered, no higher appeal is even heard.",
+      "keywords": ["hunger", "food", "sleep", "rest", "energy", "thirst", "warm", "relief", "tired", "basic needs", "appetite", "exhausted", "nourish", "breathe"],
+      "anchor_texts": [
+        "A man who has not slept does not dream of greatness; he dreams of sleep. The body's ledger is settled first, and while it stands in arrears every other appeal, status, beauty, even safety tomorrow, is read with one eye. Sell bread to the hungry plainly; eloquence is for the fed.",
+        "The hierarchy has a ground floor and every customer is standing on it somewhere: the worker who skipped lunch, the mother up since the small hours, the man cold in a thin coat. Appeals to the body require no education and survive no postponement; meet them before all others.",
+        "Physical want is the one headline that never wears out, for it is reprinted nightly by the body itself. Hunger returns, sleep must be repaid, cold finds the gap in the coat. Copy built on these recurrences enjoys what every advertiser dreams of: a market that renews itself."
+      ],
+      "linked_desires": ["survival", "comfort"]
+    },
+    {
+      "id": "safety",
+      "family": "maslow",
+      "name": "Safety Needs",
+      "description": "Once the body is fed, the mind asks whether tomorrow is provided for: order, shelter, savings, health, and protection from shock. It buys insurance in its thousand disguises.",
+      "keywords": ["secure", "protect", "insurance", "savings", "backup", "stability", "risk free", "guarantee", "just in case", "emergency fund", "reliable", "prepared", "health"],
+      "anchor_texts": [
+        "After the meal, the lock on the door. Safety is the appetite of the day after tomorrow: the paid-up policy, the funded reserve, the rail on the high place. The prospect in this need does not want adventure from you; he wants arithmetic, and the word guaranteed in honest type.",
+        "Fear of loss outpulls hope of gain in any market where men have something to lose. The mind once fed begins immediately to insure: against the slack season, the slick road, the silent heart. Offer order in place of uncertainty and you sell the second oldest commodity on earth.",
+        "Every safety purchase is the purchase of a quiet night. The alarm, the audit, the second income, the checkup kept: none of these is used on the day it is bought, and all of them are used every night thereafter. Sell the sleeping soundly, for that is the actual delivery."
+      ],
+      "linked_desires": ["safety", "control"]
+    },
+    {
+      "id": "belonging",
+      "family": "maslow",
+      "name": "Belonging and Love Needs",
+      "description": "With body and future secured, the hunger turns social: to be welcomed, paired, included, and missed when absent. It buys memberships, gifts, gatherings, and the means of staying close.",
+      "keywords": ["belong", "friends", "family", "community", "included", "welcome", "together", "relationship", "team", "club", "connection", "invited", "loved", "circle"],
+      "anchor_texts": [
+        "Fed and safe, the heart discovers it is alone. The third hunger is for the circle: the table where a chair is yours, the letter that begins with your name, the team jersey in your size. Goods that carry a person into company sell membership first and merchandise second.",
+        "Exclusion is the bruise this need protects. The boy not chosen, the new family on the street, the desk that eats lunch alone: each is a market of one, complete and urgent. Copy that says you are expected, come as you are, heals before it sells, and is loved for both.",
+        "Most gifts are letters in disguise. The flowers say remember us, the long-distance call says the miles are nothing, the matching mugs say this house is a we. Sell the message and the merchandise becomes its envelope; the heart pays the postage gladly."
+      ],
+      "linked_desires": ["belonging", "love", "connection"]
+    },
+    {
+      "id": "esteem",
+      "family": "maslow",
+      "name": "Esteem Needs",
+      "description": "Belonging achieved, the self asks to be ranked well within the circle: competence respected, contribution recognized, name carried with weight. It buys credentials, upgrades, and visible excellence.",
+      "keywords": ["respect", "recognition", "achievement", "status", "reputation", "prestige", "award", "promotion", "admired", "impressive", "credentials", "stand out", "earn respect", "title"],
+      "anchor_texts": [
+        "Inside every circle, a ladder. Once admitted, the member begins at once to climb: the better chair, the corner office, the letters after the name. Esteem is belonging with rank, and the goods that certify rank, the diploma, the upgrade, the reserved space, sell as fast as rank can change.",
+        "Respect has two faces: the one others show us and the one we show ourselves in the glass. The strongest offers polish both at once. The watch is read by its wearer a hundred times for every once a stranger sees it; write for both audiences and charge for both.",
+        "The fear under this need is invisibility: to do sound work and have it pass unnoticed, to enter a room and cause no stir. The advertisement that promises they will notice, the new car in the old driveway, the before and after at the reunion, presses the bruise and offers the salve."
+      ],
+      "linked_desires": ["status", "recognition", "ambition"]
+    },
+    {
+      "id": "self_actualization",
+      "family": "maslow",
+      "name": "Self-Actualization",
+      "description": "At the summit the question changes from what do I lack to what am I for. It buys instruments of becoming: mastery of craft, growth into full stature, the work one was made to do.",
+      "keywords": ["potential", "become", "growth", "master", "fulfillment", "best self", "purpose", "craft", "calling", "level up", "self improvement", "develop", "flourish"],
+      "anchor_texts": [
+        "What a man can be, he must be, or carry the difference as a weight. The summit need is not for more but for becoming: the instrument played as it was built to be played. Sell to this and you sell the difference between a life made and a living made; the budget for it is unmarked.",
+        "Past comfort, past applause, there remains the craftsman's itch: the work itself, done better this year than last, for no judge but the standard within. Goods at this height are instruments of becoming, the master class, the finer tool, the early hour bought back from noise.",
+        "The actualizing buyer is the strangest figure in commerce: he does not want the burden lifted, he wants it worthy. Promise him ease and he leaves; promise him growth, the next plateau, the rough trail to his own outline, and he subscribes for life, since the self is never finished."
+      ],
+      "linked_desires": ["growth", "mastery", "purpose"]
+    }
+  ]
+}

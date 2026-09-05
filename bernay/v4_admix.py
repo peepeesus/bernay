@@ -493,8 +493,44 @@ def _brief_copy_text(brief):
     return "\n".join(p for p in parts if p).strip()
 
 
+class MissingArtifacts(FileNotFoundError):
+    """The code is here; the trained artifacts are not."""
+
+
+def _preflight():
+    """Name EVERY missing artifact at once, with the variable that relocates it.
+
+    The distribution ships the architecture, not the parameters, so the first
+    call a new user makes is the one that fails. Unguarded, that surfaced as a
+    bare `FileNotFoundError: ...v4_motif_cache.pt` — one internal filename, no
+    statement of what is missing, no way to tell a broken install from a
+    working one that simply has no weights yet.
+    """
+    import v4_correlations              # module-level import is circular
+    want = [("motif cache", ms.CACHE_PATH, "V4_MOTIF_CACHE"),
+            ("PV engine checkpoint", eng_mod.CKPT, "V4_PV_CKPT"),
+            ("knowledge base", v4_correlations.KB_PATH, "V4_KB"),
+            ("taxonomy", ms.TAXONOMY_PATH, "(ships with the code)")]
+    missing = [(w, p, e) for w, p, e in want if not os.path.exists(p)]
+    if not missing:
+        return
+    lines = ["Bernay's trained artifacts are not present.",
+             "",
+             "This distribution ships the model's CODE, not its parameters.",
+             "Missing:"]
+    for what, path, env in missing:
+        lines.append("  - %-22s expected at %s" % (what, path))
+        lines.append("    %s point %s at your own copy" % (" " * 22, env))
+    lines += ["",
+              "Train your own, or set the variables above to an existing set.",
+              "Everything else (ingest, perception, the reasoning loop) works "
+              "without them."]
+    raise MissingArtifacts("\n".join(lines))
+
+
 def load_stack():
     """Load everything once: motif scorer + stats + PV engine."""
+    _preflight()
     blob = torch.load(ms.CACHE_PATH, weights_only=False)
     assert blob["vocab_hash"] == tok.vocab_hash()
     scorer = MotifScorer()

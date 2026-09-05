@@ -24,7 +24,10 @@ import os
 import re
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-KB_PATH = os.path.join(HERE, "v4_correlations.json")
+# V4_KB relocates the sourced knowledge base. It is not shipped with the
+# model's code, so a user supplying their own needs a way to say where it is
+# without editing this file.
+KB_PATH = os.environ.get("V4_KB") or os.path.join(HERE, "v4_correlations.json")
 
 AGE_BUCKETS = ["18-24", "25-34", "35-44", "45-54", "55+"]
 _AGE_RANGES = {"18-24": (18, 24), "25-34": (25, 34), "35-44": (35, 44),

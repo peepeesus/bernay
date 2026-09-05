@@ -118,10 +118,23 @@ Also absent: the training and evaluation harnesses, and the regression corpus.
 
 ## Running it
 
+`torch` is the only module-level dependency — everything else is imported at
+the point of use, so you install exactly what your inputs need:
+
+| for | install |
+| --- | --- |
+| **core** — import and decompose text | `torch` (brings numpy) |
+| creatives — OCR, scene tags, faces | `rapidocr-onnxruntime fastembed opencv-python insightface pillow` |
+| web pages | `playwright` then `playwright install chromium` |
+| video | `yt-dlp faster-whisper`, plus `ffmpeg` on PATH |
+| YouTube transcripts | `youtube-transcript-api` |
+| non-English copy | `argostranslate easyocr` |
+| the visual heads | `transformers open_clip_torch` |
+| brand extraction | `wordfreq` |
+| the desktop app | `fastapi uvicorn pywebview requests` |
+
 ```bash
-pip install numpy onnxruntime rapidocr-onnxruntime fastembed   # core
-pip install playwright && playwright install chromium          # web pages
-# video paths additionally want ffmpeg, yt-dlp and a whisper build on PATH
+pip install torch --index-url https://download.pytorch.org/whl/cpu
 ```
 
 ```python
@@ -165,11 +178,24 @@ never touches the real one on 8756. Langfuse tracing is optional: if the
 package isn't installed, `observe` degrades to a no-op instead of refusing to
 start.
 
-`load_stack()` expects a knowledge base and checkpoints, neither of which ships
-here. Without them the code imports and the architecture is fully readable, but
-it will not produce a decomposition until you supply your own.
+### What you have to supply
 
-Paths resolve from the module location and can be overridden:
+The taxonomy ships. The trained artifacts do not — `load_stack()` names every
+one that is missing, with the variable that relocates it, rather than failing
+on whichever file it happened to open first:
+
+| artifact | variable | what it is |
+| --- | --- | --- |
+| `v4_taxonomy.json` | — | desire tags and principles; **ships with the code** |
+| motif cache `.pt` | `V4_MOTIF_CACHE` | trained |
+| PV engine `.pt` | `V4_PV_CKPT` | trained |
+| backbone `.pt` | `V4_CKPT` | trained (`V4_N_EMBD`, `V4_N_LAYER` describe it) |
+| knowledge base `.json` | `V4_KB` | the sourced painpoint/mechanism table |
+
+Everything that does not need weights — ingest, landing pages, OCR, scene
+tags, faces, the routing in `is_media()` — works without any of them.
+
+Other paths resolve from the module location and can be overridden:
 
 | variable | meaning |
 | --- | --- |
