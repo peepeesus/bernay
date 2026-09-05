@@ -104,10 +104,17 @@ the same on modest hardware.
 ## What is and is not in this repository
 
 **Included** — the architecture, the heads, the decomposition, the reasoning
-loop, the perception path, and the full ingest layer. 34 modules, ~555 KB of
-source. Every input the model accepts works: pasted copy, a local image or
-video, a landing page, a Meta Ad Library or TrendTrack link, a gethookd share
-link, YouTube, TikTok, or a direct CDN media URL.
+loop, the perception path, the full ingest layer, the GPU service, and the
+desktop app. 37 modules, ~617 KB of source. Every input the model accepts
+works: pasted copy, a local image or video, a landing page, a Meta Ad Library
+or TrendTrack link, a gethookd share link, YouTube, TikTok, or a direct CDN
+media URL.
+
+Verified from a clean clone in a fresh environment, with artifacts supplied
+only through the variables below: 37/37 modules import, text decomposes, OCR
+and face reads run on a real creative, a live landing page is rendered and
+scraped, ffmpeg pulls keyframes, the reader returns an open-set painpoint, and
+the app's server imports against the flat layout.
 
 **Not included** — the trained weights and the sourced knowledge base. As
 published this is the model's code, not its parameters; you can read exactly
@@ -177,6 +184,33 @@ inside the model tree — no configuration either way.
 never touches the real one on 8756. Langfuse tracing is optional: if the
 package isn't installed, `observe` degrades to a no-op instead of refusing to
 start.
+
+## Maslow — the GPU half
+
+Schwartz decomposes and critiques. Maslow reads the audience, and it is a
+separate process on purpose: it needs CUDA, and the decomposition stack must
+stay a light CPU process.
+
+```bash
+# in a SEPARATE environment with a CUDA build of torch
+pip install transformers diffusers accelerate bitsandbytes peft fastapi uvicorn
+python v4_maslow_server.py          # serves 127.0.0.1:8799
+```
+
+It carries two arms, both loading their weights from HuggingFace at first run —
+nothing is bundled here:
+
+- **the reader** — an open-set painpoint read. `v4_reason_loop.py` is the
+  client: READ → GROUND → CHECK → REVISE, with critics that discard a read
+  rather than publish one they can't defend. Configure with
+  `V4_MASLOW_READER`, `V4_MASLOW_READER_QUANT` (`nf4` / `int8` / `bf16` /
+  `off`), `V4_MASLOW_READER_ADAPTER`.
+- **image generation** — `v4_maslow_imagegen.py` builds the avatar and
+  painpoint scenes for a decomposition.
+
+The app starts this service itself and reports both arms in `/api/health`, so a
+dark GPU half is visible rather than silently producing a deck with no images.
+Everything on the CPU side runs without it.
 
 ### What you have to supply
 
